@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MyMoadal</title>
+  <title>MyMoadal - University Average Calculator</title>
   <style>
-    /* Global Styles */
+    /* Reset & basics */
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background: #f5f6fa; }
     a { text-decoration: none; }
-    section { padding: 80px 20px; }
 
     /* Hero Section */
     .hero {
@@ -17,10 +16,10 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      text-align: center;
       min-height: 100vh;
       background: linear-gradient(135deg, #74ebd5, #ACB6E5);
       color: #fff;
+      text-align: center;
       padding: 0 20px;
     }
     .hero .logo {
@@ -48,21 +47,39 @@
     }
     .hero .button:hover { background-color: #1c5980; transform: scale(1.05); }
 
+    /* Screenshots Carousel */
+    .screenshots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 60px 20px;
+      background: #fff;
+    }
+    .screenshots img {
+      max-width: 250px;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+    .screenshots img:hover { transform: scale(1.05); }
+
     /* Features Section */
     .features {
-      background: #f5f5f5;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 40px;
-      text-align: center;
+      gap: 30px;
+      padding: 60px 20px;
     }
     .feature {
       flex: 1 1 250px;
       background: #fff;
       border-radius: 15px;
-      padding: 30px 20px;
+      padding: 25px 20px;
       box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      text-align: center;
       transition: transform 0.3s;
     }
     .feature:hover { transform: translateY(-5px); }
@@ -74,7 +91,7 @@
       background: #2c3e50;
       color: #fff;
       text-align: center;
-      padding: 30px 20px;
+      padding: 40px 20px;
     }
     footer a { color: #3498db; }
 
@@ -82,7 +99,8 @@
     @media (max-width: 768px) {
       .hero h1 { font-size: 2.2em; }
       .hero p { font-size: 1em; }
-      .features { flex-direction: column; }
+      .screenshots img { max-width: 80%; }
+      .features { flex-direction: column; align-items: center; }
     }
   </style>
 </head>
@@ -92,28 +110,35 @@
   <section class="hero">
     <div class="logo">M</div>
     <h1>MyMoadal</h1>
-    <p>MyMoadal helps university students calculate their semester and unit averages effortlessly. Stay on top of your grades with a clean, intuitive interface.</p>
+    <p>Effortlessly calculate your university semester and unit averages. Stay organized and on top of your grades with a simple, intuitive app designed for students.</p>
     <a class="button" href="MyMoadal.apk" download>Download APK</a>
     <p style="margin-top:15px; font-size:0.9em;">*Enable "Install from Unknown Sources" on your device to install the app.*</p>
+  </section>
+
+  <!-- Screenshots Section -->
+  <section class="screenshots">
+    <img src="screenshot1.png" alt="MyMoadal Screenshot 1">
+    <img src="screenshot2.png" alt="MyMoadal Screenshot 2">
+    <img src="screenshot3.png" alt="MyMoadal Screenshot 3">
   </section>
 
   <!-- Features Section -->
   <section class="features">
     <div class="feature">
-      <h3>Easy Calculations</h3>
-      <p>Quickly compute unit and semester averages without manual formulas.</p>
+      <h3>Quick Calculations</h3>
+      <p>Compute semester and unit averages instantly without manual formulas.</p>
     </div>
     <div class="feature">
-      <h3>Customizable Presets</h3>
-      <p>Create presets for different courses or semesters to save time and stay organized.</p>
+      <h3>Custom Presets</h3>
+      <p>Create presets for different semesters or modules to save time.</p>
     </div>
     <div class="feature">
       <h3>Offline Access</h3>
-      <p>All your data is stored locally. No internet connection required to calculate your averages.</p>
+      <p>Your data is stored locally — no internet required.</p>
     </div>
     <div class="feature">
       <h3>Student-Friendly UI</h3>
-      <p>A clean, intuitive interface designed specifically for university students.</p>
+      <p>Clean, intuitive interface designed for university students.</p>
     </div>
   </section>
 
