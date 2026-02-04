@@ -7,7 +7,7 @@
   <style>
     /* Reset & basics */
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f0f4f8; color: #333; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #e8f0fe; color: #333; }
 
     /* Navigation */
     nav {
@@ -15,7 +15,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 20px 40px;
-      background: #fff;
+      background: #f5f7ff;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
       position: sticky;
       top: 0;
@@ -44,8 +44,6 @@
     .hero .buttons a {
       padding: 15px 30px; border-radius: 10px; font-weight: 600; transition: 0.3s;
     }
-    .hero .google { background: #2ecc71; color: #fff; }
-    .hero .google:hover { background: #27ae60; }
     .hero .apk { background: #3498db; color: #fff; }
     .hero .apk:hover { background: #2980b9; }
 
@@ -71,15 +69,15 @@
       justify-content: center;
       gap: 30px;
       padding: 60px 40px;
-      background: #fff;
+      background: #f0f4ff; /* soft accent color instead of white */
     }
     .feature {
       flex: 1 1 250px;
-      background: #f9f9f9;
+      background: #e3ebff; /* slightly darker accent for card */
       padding: 25px 20px;
       border-radius: 15px;
       text-align: center;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
       transition: transform 0.3s;
     }
     .feature:hover { transform: translateY(-5px); }
@@ -119,8 +117,6 @@
       <p>MyMoadal helps students compute semester and unit averages effortlessly. Stay on top of your grades with a clean, intuitive interface.</p>
       <div class="buttons" id="download">
         <a href="MyMoadal.apk" class="apk">Download APK</a>
-        <!-- Optional Google Play -->
-        <!-- <a href="#" class="google">Get on Google Play</a> -->
       </div>
     </div>
     <div class="screenshots">
