@@ -46,6 +46,8 @@
       scroll-behavior: smooth;
     }
 
+
+
     .animated-bg {
       position: fixed;
       top: 0;
@@ -114,9 +116,7 @@
       padding: 0 24px;
     }
 
-    main {
-      padding-top: 96px;
-    }
+
 
     section {
       position: relative;
@@ -145,14 +145,14 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 64px;
+      height: 34px;
       gap: 32px;
     }
 
     .logo {
       font-size: 24px;
       font-weight: 800;
-      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      background: linear-gradient(135deg, #5456fa, #b35cf6);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -234,12 +234,12 @@
       font-weight: 800;
       line-height: 1.05;
       margin-bottom: 24px;
-      background: linear-gradient(135deg, #e6edf3, #8b949e);
+      background: linear-gradient(135deg, #5456fa, #b35cf6);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-
+    
     .hero .tagline {
       font-size: 22px;
       color: var(--text-secondary);
@@ -380,7 +380,7 @@
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      background: linear-gradient(135deg, #5456fa, #b35cf6);
       color: white;
       box-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
       position: relative;
@@ -476,8 +476,8 @@
       max-width: 300px;
       margin: 0 auto;
       background: var(--bg-secondary);
-      border-radius: 32px;
-      padding: 8px;
+      border-radius: 24px;
+      padding: 6px;
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
       border: 2px solid rgba(99, 102, 241, 0.2);
       position: relative;
@@ -493,8 +493,8 @@
 
     .showcase .phone-frame {
       max-width: 350px;
-      padding: 4px;
-      border-radius: 20px;
+      padding: 2px;
+      border-radius: 18px;
       animation: none;
       box-shadow: 0 18px 48px rgba(15, 23, 42, 0.9);
       border-width: 1px;
@@ -615,14 +615,14 @@
 
     .features-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 32px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
     }
 
     .feature-card {
       background:
-        radial-gradient(circle at top left, rgba(148, 163, 253, 0.11), transparent 60%),
-        var(--bg-tertiary);
+        radial-gradient(circle at top left, rgba(148, 164, 253, 0.038), transparent 60%),
+        var(--bg-secondary);
       padding: 32px 30px;
       border-radius: 18px;
       border: 1px solid rgba(99, 102, 241, 0.18);
@@ -630,6 +630,7 @@
       position: relative;
       overflow: hidden;
       backdrop-filter: blur(10px);
+
     }
 
     .feature-card::before {
@@ -657,7 +658,7 @@
     .feature-icon {
       width: 56px;
       height: 56px;
-      background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2));
+      background: rgba(139, 92, 246, 0.2);
       border-radius: 12px;
       display: flex;
       align-items: center;
@@ -675,47 +676,6 @@
     .feature-card p {
       color: var(--text-secondary);
       line-height: 1.7;
-    }
-
-    .stats-section {
-      padding: 96px 0;
-      text-align: center;
-      background:
-        radial-gradient(circle at top, rgba(15, 23, 42, 0.95), transparent 65%),
-        var(--bg-primary);
-      position: relative;
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 32px;
-      margin-top: 48px;
-    }
-
-    .stat-item {
-      padding: 24px 22px 22px;
-      border-radius: 18px;
-      border: 1px solid rgba(99, 102, 241, 0.25);
-      background:
-        radial-gradient(circle at top, rgba(56, 189, 248, 0.12), transparent 60%),
-        rgba(13, 17, 23, 0.96);
-      box-shadow: 0 18px 46px rgba(2, 6, 23, 0.9);
-    }
-
-    .stat-item h3 {
-      font-size: 40px;
-      font-weight: 800;
-      background: linear-gradient(135deg, #6366f1, #8b5cf6);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 6px;
-    }
-
-    .stat-item p {
-      color: var(--text-secondary);
-      font-size: 14px;
     }
 
     .download-section {
@@ -857,7 +817,22 @@
       transform: translateY(0);
     }
 
+
     @media (max-width: 768px) {
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-mockup {
+        margin-top: 48px;
+      }
+
+      .phone-frame.angled {
+        transform: none;
+      }
+
       .hero h1 {
         font-size: 48px;
       }
@@ -925,11 +900,18 @@
   <header class="navbar">
     <div class="container nav-container">
       <div class="logo">MyMoadal</div>
-      <nav class="nav-center">
-        <a href="#features">Features</a>
-      </nav>
+
       <div class="nav-right">
-        <a href="#download" class="btn btn-primary small">Get the app</a>
+
+        <a href="#download" class="btn btn-primary small">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-download ">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" x2="12" y1="15" y2="3"></line>
+          </svg>
+          Get the app</a>
       </div>
     </div>
   </header>
@@ -947,8 +929,8 @@
 
         <div class="hero-content fade-in">
           <div class="hero-badge">
-            <span class="hero-badge-pill">β</span>
-            <span>New: Track your semester averages in seconds</span>
+            <span class="hero-badge-pill"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap text-blue-600"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"></path><path d="M22 10v6"></path><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path></svg></span>
+            <span>For University Students</span>
           </div>
           <h1>MyMoadal</h1>
           <p class="tagline">Calculate smarter. Track your university progress with confidence.</p>
@@ -958,8 +940,22 @@
           </p>
 
           <div class="cta-buttons">
-            <a href="./MyMoadal.apk" class="btn btn-primary" download>Download APK</a>
+            <a href="./MyMoadal.apk" class="btn btn-primary" download>
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-download ">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" x2="12" y1="15" y2="3"></line>
+              </svg>
+              Download for Android
+            </a>
             <a href="https://github.com/Dyaa-belb/mymoadal-app/" class="btn btn-secondary" target="_blank">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+                </path>
+              </svg>
               View on GitHub
             </a>
           </div>
@@ -1067,77 +1063,71 @@
         <div class="features-grid">
           <div class="feature-card fade-in">
             <div class="feature-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path
-                  d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
-                </path>
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-save text-blue-600">
+                <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                <polyline points="7 3 7 8 15 8"></polyline>
               </svg>
             </div>
-            <h3>Accurate calculations</h3>
-            <p>Precision-engineered algorithms ensure your averages are calculated correctly every time, accounting for
-              all weighting factors.</p>
-          </div>
-          <div class="feature-card fade-in">
-            <div class="feature-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <line x1="12" y1="1" x2="12" y2="23"></line>
-                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-              </svg>
-            </div>
-            <h3>Flexible weighting</h3>
+            <h3>Custom Presets</h3>
             <p>Customize TD, TP, and exam weightings to match your university's grading system perfectly.</p>
           </div>
           <div class="feature-card fade-in">
             <div class="feature-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
-                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
-                <line x1="6" y1="6" x2="6.01" y2="6"></line>
-                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-calculator text-blue-600">
+                <rect width="16" height="20" x="4" y="2" rx="2"></rect>
+                <line x1="8" x2="16" y1="6" y2="6"></line>
+                <line x1="16" x2="16" y1="14" y2="18"></line>
+                <path d="M16 10h.01"></path>
+                <path d="M12 10h.01"></path>
+                <path d="M8 10h.01"></path>
+                <path d="M12 14h.01"></path>
+                <path d="M8 14h.01"></path>
+                <path d="M12 18h.01"></path>
+                <path d="M8 18h.01"></path>
               </svg>
             </div>
-            <h3>Modular structure</h3>
-            <p>Organize your courses into semesters and units with a clean, intuitive interface that makes sense.</p>
+            <h3>Quick Calculations</h3>
+            <p>Instantly calculate your semester average, cumulative GPA, and predict final grades with intuitive tools.
+            </p>
           </div>
           <div class="feature-card fade-in">
             <div class="feature-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-wifi-off text-blue-600">
+                <path d="M12 20h.01"></path>
+                <path d="M8.5 16.429a5 5 0 0 1 7 0"></path>
+                <path d="M5 12.859a10 10 0 0 1 5.17-2.69"></path>
+                <path d="M19 12.859a10 10 0 0 0-2.007-1.523"></path>
+                <path d="M2 8.82a15 15 0 0 1 4.177-2.643"></path>
+                <path d="M22 8.82a15 15 0 0 0-11.288-3.764"></path>
+                <path d="m2 2 20 20"></path>
               </svg>
             </div>
-            <h3>Offline-first</h3>
-            <p>Your data stays on your device. No internet connection required, no account needed, complete privacy.</p>
+            <h3>Offline Access</h3>
+            <p>Work without internet connection. All your data is stored locally and synced automatically.</p>
           </div>
           <div class="feature-card fade-in">
             <div class="feature-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 16 14"></polyline>
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-sparkles text-blue-600">
+                <path
+                  d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z">
+                </path>
+                <path d="M5 3v4"></path>
+                <path d="M19 17v4"></path>
+                <path d="M3 5h4"></path>
+                <path d="M17 19h4"></path>
               </svg>
             </div>
-            <h3>Lightning fast</h3>
-            <p>Optimized performance means instant calculations and smooth navigation, even on older devices.</p>
-          </div>
-          <div class="feature-card fade-in">
-            <div class="feature-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path>
-                <path d="M8.5 8.5v.01"></path>
-                <path d="M16 15.5v.01"></path>
-                <path d="M12 12v.01"></path>
-                <path d="M11 17v.01"></path>
-                <path d="M7 14v.01"></path>
-              </svg>
-            </div>
-            <h3>Student-focused design</h3>
-            <p>Every pixel is crafted with the academic experience in mind. Simple, clean, and distraction-free.</p>
+            <h3>Student-Friendly UI</h3>
+            <p>Clean, modern interface designed specifically for students with focus on ease of use and efficiency.</p>
           </div>
         </div>
       </div>
